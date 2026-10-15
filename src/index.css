@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-slate-100 text-slate-900 font-sans antialiased; }
+
+[dir='rtl'] body, [dir='rtl'] input, [dir='rtl'] textarea, [dir='rtl'] select, [dir='rtl'] button {
+  font-family: 'Noto Sans Arabic', 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full; }
+
+.glow-gold { box-shadow: 0 0 80px 10px rgba(240, 195, 69, 0.25); }
+.text-gradient-gold {
+  background: linear-gradient(120deg, #f0c345 0%, #d4af37 45%, #fff1c1 60%, #d4af37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-bg {
+  background: radial-gradient(1200px 600px at 70% -10%, #1B2A56 0%, #0f1c37 45%, #0b162c 100%);
+}

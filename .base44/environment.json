@@ -1,0 +1,43 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "JWT_SECRET",
+      "description": "Signs login session tokens. A development value is auto-generated; not an external credential.",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": true
+    },
+    {
+      "name": "GOOGLE_CLIENT_ID",
+      "description": "Google Cloud Console → APIs & Services → Credentials → OAuth 2.0 Client ID. Redirect URI: https://8000-<your-sandbox-host>/api/auth/google/callback",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "GOOGLE_CLIENT_SECRET",
+      "description": "Client secret for the same Google OAuth client.",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "MICROSOFT_CLIENT_ID",
+      "description": "Azure Portal → App registrations → Application (client) ID. Redirect URI: https://8000-<your-sandbox-host>/api/auth/microsoft/callback",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "MICROSOFT_CLIENT_SECRET",
+      "description": "Client secret for the same Azure app registration.",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "FACEBOOK_APP_ID",
+      "description": "Meta for Developers → Apps → App ID. Valid OAuth redirect URI: https://8000-<your-sandbox-host>/api/auth/facebook/callback",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "FACEBOOK_APP_SECRET",
+      "description": "App secret for the same Meta app.",
+      "requiredAtBoot": false
+    }
+  ]
+}
